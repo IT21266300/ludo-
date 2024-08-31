@@ -12,12 +12,7 @@ extern const char* getColorName(PlayerColor color);
 
 int main() {
 
-     // Redirect stdout to a file
-    FILE *outputFile = freopen("game_output.txt", "w", stdout);
-    if (outputFile == NULL) {
-        perror("Failed to open file for output");
-        return 1;
-    }
+    
 
     srand(time(NULL));  // Initialize random seed
     
@@ -128,7 +123,6 @@ int main() {
     printf("\nPress Enter to exit...");
     getchar();
 
-     fclose(outputFile);
     
     return 0;
 }
