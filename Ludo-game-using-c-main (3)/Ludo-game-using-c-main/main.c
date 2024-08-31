@@ -98,12 +98,12 @@ int main() {
         
         // Move to next player
         game.currentPlayerIndex = (game.currentPlayerIndex + 1) % NUM_PLAYERS;
-        // Check if the round is complete (i.e., all players have taken their turns)
+        // Check if the round is complete 
         if (game.currentPlayerIndex == 0) {
             game.roundCount++;
-            // Update mystery cell if needed
+            // Update mystery cell 
             if (game.roundCount % 4 == 0) {
-                // Implement mystery cell logic here
+                // Implement mystery cell logic
                 if (game.roundCount % 4 == 0) {
     game.mysteryCell.position = rand() % BOARD_SIZE; // Randomly place the mystery cell
     game.mysteryCell.roundsLeft = 3; // It will stay for 3 rounds
